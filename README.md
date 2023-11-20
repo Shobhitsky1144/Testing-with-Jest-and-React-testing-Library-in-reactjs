@@ -1,51 +1,43 @@
-Purpose:
+React Component Testing Documentation
 
-The useFetch custom hook is designed to manage asynchronous data fetching within React components.
-Signature:
+This documentation provides an overview of the test cases written using the @testing-library/react library for various React components. The test cases are designed to ensure the correct behavior and functionality of the components.
 
+1. ButtonTesting Component Test
 
-useFetch(url: string): { data: any[], loading: boolean, error: boolean }
+Test Description
 
-Parameters:
+Objective: Verify that the button click event updates the component as expected.
 
-url (String): The URL from which data is to be fetched.
+Steps:
+Render the ButtonTesting component.
+Simulate a button click event.
+Check if the text "updated" is present in the document.
 
-Returns:
+2. ImageTesting Component Test
 
-An object with the following properties:
+Test Description
+Objective: Ensure the presence of the image element in the ImageTesting component.
+Steps:
+Render the ImageTesting component.
+Get the image element by its title attribute.
+Check if the image element is present in the document.
 
-data (Array): The fetched data.
+3. InputTesting Component Test
 
-loading (Boolean): Indicates whether data is currently being loaded.
+Test Description
+Objective: Validate the input box and its behavior on change.
+Steps:
+Render the InputTesting component.
+Get the input element by its role and placeholder text.
+Check if the input element and its placeholder are present in the document.
+Check specific attributes of the input element (name, id, type).
+Simulate a change event on the input element and check if the input value is updated.
 
-error (Boolean): Indicates whether an error occurred during the fetch operation.
+4. TextTesting Component Test
 
-React Component: Card
-
-Purpose:
-
-The Card component demonstrates the practical application of the useFetch custom hook. It fetches data and dynamically renders it in a card format.
-Dependencies:
-
-React: The React library is required for creating React components.
-
-Usage:
-
-<Card />
-
-Notes:
-
-Ensure the provided URL in the useFetch hook is valid and returns JSON data.
-
-Customize the component UI and error messages to align with specific application requirements.
-
-Assumes a basic familiarity with React and asynchronous JavaScript operations for effective utilization.
-
-This point-by-point breakdown provides a structured overview of the useFetch custom hook and the Card component, covering their purposes, signatures, parameters, returns, dependencies, 
-
-usage, and additional notes. Adjustments can be made as needed for specific project contexts.
-
-
-
-
-
+Test Description
+Objective: Confirm the presence of specific text in the TextTesting component.
+Steps:
+Render the TextTesting component.
+Get the text element containing "Text testing" case-insensitively.
+Check if the text element is present in the document.
